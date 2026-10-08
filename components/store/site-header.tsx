@@ -1,4 +1,5 @@
-import { ShoppingBag } from 'lucide-react'
+import Link from 'next/link'
+import { ShoppingBag, Star } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export type Step = 'home' | 'product' | 'checkout'
@@ -27,7 +28,7 @@ export function SiteHeader({
         >
           A
         </span>
-        <span>Aura Audio</span>
+        <span className="sr-only whitespace-nowrap sm:not-sr-only">Aura Audio</span>
       </a>
 
       <nav aria-label="Store sections" className="lg:hidden">
@@ -63,11 +64,18 @@ export function SiteHeader({
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-foreground">
-              Support
-            </a>
+            <Link href="/reviews" className="hover:text-foreground">
+              Reviews
+            </Link>
           </li>
         </ul>
+        <Link
+          href="/reviews"
+          className="flex size-8 items-center justify-center rounded-lg border bg-card hover:bg-muted lg:hidden"
+        >
+          <Star className="size-4" aria-hidden="true" />
+          <span className="sr-only">Customer reviews</span>
+        </Link>
         <button
           type="button"
           onClick={() => onStepChange('checkout')}
