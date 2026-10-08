@@ -32,7 +32,7 @@ export function HeroPanel({ onShop, onBuy }: { onShop: () => void; onBuy: () => 
           id="hero-title"
           className="text-3xl leading-[1.05] font-semibold tracking-tight text-balance xl:text-[2.6rem]"
         >
-          Silence the noise. Hear what matters.
+          Welcome to My Store
         </h2>
         <p className="max-w-sm text-sm leading-relaxed text-pretty text-background/65">
           Aura One adapts to your environment 50,000 times per second, delivering studio-grade
